@@ -43,7 +43,7 @@ local function openGUI()
     frame.Size = UDim2.new(0, 514, 0, 288) -- Размеры {0, 514}, {0, 288}
     frame.AnchorPoint = Vector2.new(0.5, 0) -- Установка точки привязки к верхнему центру
     frame.Position = UDim2.new(0.5, 0, 0, 0) -- Размещение в верхней части экрана
-    frame.ZIndex = 100000000000000000  -- Устанавливаем ZIndex в 10
+    frame.ZIndex = inf  -- Устанавливаем ZIndex в 10
 
     -- Контейнер для заголовка и кнопки "Close"
     local titleContainer = Instance.new("Frame")
@@ -52,7 +52,7 @@ local function openGUI()
     titleContainer.BackgroundColor3 = Color3.fromRGB(44, 44, 44) -- Цвет фона
     titleContainer.BackgroundTransparency = 0.12 -- Установленное значение BackgroundTransparency
     titleContainer.BorderSizePixel = 0 -- Убираем границу
-    titleContainer.ZIndex = 10000000000000000000
+    titleContainer.ZIndex = inf
 
     -- Добавление UICorner с заданным радиусом
     local titleContainerCorner = Instance.new("UICorner")
@@ -70,7 +70,7 @@ local function openGUI()
     titleLabel.Position = UDim2.new(0, 10, 0, 0) -- Отступ слева 10 пикселей
     titleLabel.BackgroundTransparency = 0 -- Установленное значение BackgroundTransparency
     titleLabel.BorderSizePixel = 0 -- Убираем границу
-    titleLabel.ZIndex = 10000000000000000000
+    titleLabel.ZIndex = inf
 
     -- Добавление кнопки "Close"
     local closeButton = Instance.new("TextButton")
