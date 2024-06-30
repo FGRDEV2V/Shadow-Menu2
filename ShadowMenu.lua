@@ -135,17 +135,17 @@ local function openGUI()
     resetButton.TextColor3 = Color3.fromRGB(0, 0, 0)
     resetButton.ZIndex = 10000000000000000000
 
-    local   ShadowBot = Instance.new("TextButton")
-    ShadowBot.Name = "ShadowBot"
-    ShadowBot.Parent = titleContainer
-    ShadowBot.BackgroundColor3 = Color3.fromRGB(70, 70, 70) -- Более темный цвет фона
-    ShadowBot.Size = UDim2.new(0, 200, 0, 35) -- Размеры {0, 200}, {0, 35}
-    ShadowBot.Position = UDim2.new(0, 10, 0, 135) -- Позиция ниже Reset
-    ShadowBot.Text = "ShadowBot"
-    ShadowBot.Font = Enum.Font.SourceSans
-    ShadowBot.TextSize = 14
-    ShadowBot.TextColor3 = Color3.fromRGB(0, 0, 0)
-    ShadowBot.ZIndex = 10000000000000000000
+    local  XD = Instance.new("TextButton")
+    XD.Name = " XD"
+    XD.Parent = titleContainer
+    XD.BackgroundColor3 = Color3.fromRGB(70, 70, 70) -- Более темный цвет фона
+    XD.Size = UDim2.new(0, 200, 0, 35) -- Размеры {0, 200}, {0, 35}
+    XD.Position = UDim2.new(0, 10, 0, 135) -- Позиция ниже Reset
+    XD.Text = ""
+    XD.Font = Enum.Font.SourceSans
+    XD.TextSize = 14
+    XD.TextColor3 = Color3.fromRGB(0, 0, 0)
+    XD.ZIndex = 10000000000000000000
 
 
     local systemBrokenButton = Instance.new("TextButton")
@@ -234,8 +234,8 @@ local function openGUI()
         Game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 
-   ShadowBot.MouseButton1Click:Connect(function()
-     
+    LunarBot.MouseButton1Click:Connect(function()
+       
     end)
 
     systemBrokenButton.MouseButton1Click:Connect(function()
