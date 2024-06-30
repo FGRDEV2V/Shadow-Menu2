@@ -207,7 +207,6 @@ local function openGUI()
         Game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 
-    -- Добавление реакции на нажатие кнопок "Button2", "Button3"
     button2.MouseButton1Click:Connect(function()
         print("Clicked Button2")
         -- Добавьте свой код для кнопки 2 здесь
