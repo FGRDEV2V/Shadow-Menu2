@@ -5,7 +5,8 @@ local whitelist = {
     "crater_robloxq",
     "locality12345",
     "DismoralledLaux2",
-    "DismoralledLaux3",-- Добавлен новый игрок в whitelist
+    "DismoralledLaux3",
+    "Ylibnisi_durak",-- Добавлен новый игрок в whitelist
     -- Добавьте другие имена игроков сюда
 }
 
