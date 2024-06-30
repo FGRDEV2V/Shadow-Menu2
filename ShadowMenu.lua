@@ -83,7 +83,7 @@ local function openGUI()
     closeButton.Font = Enum.Font.SourceSans
     closeButton.TextSize = 20
     closeButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    closeButton.ZIndex = 10000000000000000000
+    closeButton.ZIndex = inf
 
     -- Добавление UICorner с заданным радиусом кнопки
     local closeButtonCorner = Instance.new("UICorner")
@@ -101,7 +101,7 @@ local function openGUI()
     iyButton.Font = Enum.Font.SourceSans
     iyButton.TextSize = 14
     iyButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    iyButton.ZIndex = 10000000000000000000
+    iyButton.ZIndex = inf
 
     -- Добавление UICorner с заданным радиусом кнопки Infinite Yield
     local iyButtonCorner = Instance.new("UICorner")
@@ -119,7 +119,7 @@ local function openGUI()
     resetButton.Font = Enum.Font.SourceSans
     resetButton.TextSize = 14
     resetButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    resetButton.ZIndex = 10000000000000000000
+    resetButton.ZIndex = inf
 
     local  XD = Instance.new("TextButton")
     XD.Name = " XD"
@@ -131,7 +131,7 @@ local function openGUI()
     XD.Font = Enum.Font.SourceSans
     XD.TextSize = 14
     XD.TextColor3 = Color3.fromRGB(0, 0, 0)
-    XD.ZIndex = 10000000000000000000
+    XD.ZIndex = inf
 
 
     local systemBrokenButton = Instance.new("TextButton")
@@ -144,7 +144,7 @@ local function openGUI()
     systemBrokenButton.Font = Enum.Font.SourceSans
     systemBrokenButton.TextSize = 14
     systemBrokenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    systemBrokenButton.ZIndex = 10000000000000000000
+    systemBrokenButton.ZIndex = inf
 
     -- Добавление UICorner для кнопок
     local resetButtonCorner = Instance.new("UICorner")
@@ -166,7 +166,7 @@ local function openGUI()
     avatarImage.Size = UDim2.new(0, 50, 0, 50)
     avatarImage.Position = UDim2.new(0, 220, 0, 45) -- Позиция рядом с кнопками
     avatarImage.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?userId=" .. player.UserId .. "&x=100&y=100&format=png"
-    avatarImage.ZIndex = 10000000000000000000
+    avatarImage.ZIndex = inf
     -- Функции для перемещения GUI
     local dragging
     local dragInput
