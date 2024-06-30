@@ -26,13 +26,7 @@ local function chat(player, message)
     game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All", player.Name)
 end
 
--- Пример использования:
-local player = game.Players.LocalPlayer -- Получаем текущего игрока (это предположение, что вы хотите отправлять сообщения от локального игрока)
 
-task.spawn(function()
-   chat(player, "{Shadow Menu loaded successfully!}")
-
-end)
 
 
 -- Функция для открытия GUI
