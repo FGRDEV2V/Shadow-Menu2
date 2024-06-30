@@ -1,7 +1,7 @@
 -- Таблица с именами игроков, имеющих доступ к GUI
 local whitelist = {
     "Player1",
-    "Player2",
+    "XXXTENTACION122462",
     "crater_robloxq",  -- Добавлен новый игрок в whitelist
     -- Добавьте другие имена игроков сюда
 }
