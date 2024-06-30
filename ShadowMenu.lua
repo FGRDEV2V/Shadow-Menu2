@@ -234,7 +234,7 @@ local function openGUI()
         Game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 
-    LunarBot.MouseButton1Click:Connect(function()
+    XD.MouseButton1Click:Connect(function()
        
     end)
 
