@@ -21,11 +21,6 @@ local function isPlayerWhitelisted(player)
     return false
 end
 
-
-
-
-
-
 -- Функция для открытия GUI
 local function openGUI()
     -- Проверка, разрешено ли игроку доступ
