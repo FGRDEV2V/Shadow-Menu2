@@ -52,7 +52,7 @@ local function openGUI()
     titleContainer.BackgroundColor3 = Color3.fromRGB(44, 44, 44) -- Цвет фона
     titleContainer.BackgroundTransparency = 0.12 -- Установленное значение BackgroundTransparency
     titleContainer.BorderSizePixel = 0 -- Убираем границу
-    titleContainer.ZIndex = inf
+    titleContainer.ZIndex = 2000000000000000
 
     -- Добавление UICorner с заданным радиусом
     local titleContainerCorner = Instance.new("UICorner")
@@ -70,7 +70,7 @@ local function openGUI()
     titleLabel.Position = UDim2.new(0, 10, 0, 0) -- Отступ слева 10 пикселей
     titleLabel.BackgroundTransparency = 0 -- Установленное значение BackgroundTransparency
     titleLabel.BorderSizePixel = 0 -- Убираем границу
-    titleLabel.ZIndex = inf
+    titleLabel.ZIndex = 2000000000000000
 
     -- Добавление кнопки "Close"
     local closeButton = Instance.new("TextButton")
@@ -83,7 +83,7 @@ local function openGUI()
     closeButton.Font = Enum.Font.SourceSans
     closeButton.TextSize = 20
     closeButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    closeButton.ZIndex = inf
+    closeButton.ZIndex = 2000000000000000
 
     -- Добавление UICorner с заданным радиусом кнопки
     local closeButtonCorner = Instance.new("UICorner")
@@ -101,7 +101,7 @@ local function openGUI()
     iyButton.Font = Enum.Font.SourceSans
     iyButton.TextSize = 14
     iyButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    iyButton.ZIndex = inf
+    iyButton.ZIndex = 2000000000000000
 
     -- Добавление UICorner с заданным радиусом кнопки Infinite Yield
     local iyButtonCorner = Instance.new("UICorner")
@@ -119,7 +119,7 @@ local function openGUI()
     resetButton.Font = Enum.Font.SourceSans
     resetButton.TextSize = 14
     resetButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    resetButton.ZIndex = inf
+    resetButton.ZIndex = 2000000000000000
 
     local  XD = Instance.new("TextButton")
     XD.Name = " XD"
@@ -131,7 +131,7 @@ local function openGUI()
     XD.Font = Enum.Font.SourceSans
     XD.TextSize = 14
     XD.TextColor3 = Color3.fromRGB(0, 0, 0)
-    XD.ZIndex = inf
+    XD.ZIndex = 2000000000000000
 
 
     local systemBrokenButton = Instance.new("TextButton")
@@ -144,7 +144,7 @@ local function openGUI()
     systemBrokenButton.Font = Enum.Font.SourceSans
     systemBrokenButton.TextSize = 14
     systemBrokenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-    systemBrokenButton.ZIndex = inf
+    systemBrokenButton.ZIndex = 2000000000000000
 
     -- Добавление UICorner для кнопок
     local resetButtonCorner = Instance.new("UICorner")
@@ -166,7 +166,7 @@ local function openGUI()
     avatarImage.Size = UDim2.new(0, 50, 0, 50)
     avatarImage.Position = UDim2.new(0, 220, 0, 45) -- Позиция рядом с кнопками
     avatarImage.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?userId=" .. player.UserId .. "&x=100&y=100&format=png"
-    avatarImage.ZIndex = inf
+    avatarImage.ZIndex = 2000000000000000
     -- Функции для перемещения GUI
     local dragging
     local dragInput
