@@ -3,7 +3,7 @@ local whitelist = {
     "Kyouko3545",
     "XXXTENTACION122462",
     "crater_robloxq",
-     "Kyouko3545",
+     "locality12345",
 }
 
 -- Функция для проверки, находится ли игрок в whitelist
