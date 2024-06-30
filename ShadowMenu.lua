@@ -204,7 +204,7 @@ local function openGUI()
     -- Реакция на нажатие кнопки "Reset"
     resetButton.MouseButton1Click:Connect(function()
         print("Clicked Reset")
-        -- Добавьте свой код для сброса здесь
+        Game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 
     -- Добавление реакции на нажатие кнопок "Button2", "Button3"
