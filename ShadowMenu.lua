@@ -43,7 +43,7 @@ local function openGUI()
     frame.Size = UDim2.new(0, 514, 0, 288) -- Размеры {0, 514}, {0, 288}
     frame.AnchorPoint = Vector2.new(0.5, 0) -- Установка точки привязки к верхнему центру
     frame.Position = UDim2.new(0.5, 0, 0, 0) -- Размещение в верхней части экрана
-    frame.ZIndex = inf  -- Устанавливаем ZIndex в 10
+    frame.ZIndex = 1000000000000000 -- Устанавливаем ZIndex в 10
 
     -- Контейнер для заголовка и кнопки "Close"
     local titleContainer = Instance.new("Frame")
