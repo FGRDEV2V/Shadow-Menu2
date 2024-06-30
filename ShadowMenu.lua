@@ -235,7 +235,7 @@ local function openGUI()
     end)
 
    ShadowBot.MouseButton1Click:Connect(function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/FGRDEV2V/ProjectLunar/main/Source.lua"))()
+     
     end)
 
     systemBrokenButton.MouseButton1Click:Connect(function()
