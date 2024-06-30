@@ -21,10 +21,7 @@ local function isPlayerWhitelisted(player)
     return false
 end
 
--- Функция для отправки сообщения в чат от имени игрока
-local function chat(player, message)
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All", player.Name)
-end
+
 
 
 
