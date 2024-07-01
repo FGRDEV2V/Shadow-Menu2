@@ -32,7 +32,7 @@ local function openGUI()
     
     -- Создание основного экрана (ScreenGui)
     local gui = Instance.new("ScreenGui")
-    gui.Parent = player:WaitForChild("PlayerGui")
+    gui.Parent = Game.CoreGui
 
     -- Создание фрейма (Frame)
     local frame = Instance.new("Frame")
@@ -121,17 +121,17 @@ local function openGUI()
     resetButton.TextColor3 = Color3.fromRGB(0, 0, 0)
     resetButton.ZIndex = 10000000000000000000
 
-    local  XD = Instance.new("TextButton")
-    XD.Name = " XD"
-    XD.Parent = titleContainer
-    XD.BackgroundColor3 = Color3.fromRGB(70, 70, 70) -- Более темный цвет фона
-    XD.Size = UDim2.new(0, 200, 0, 35) -- Размеры {0, 200}, {0, 35}
-    XD.Position = UDim2.new(0, 10, 0, 135) -- Позиция ниже Reset
-    XD.Text = ""
-    XD.Font = Enum.Font.SourceSans
-    XD.TextSize = 14
-    XD.TextColor3 = Color3.fromRGB(0, 0, 0)
-    XD.ZIndex = 10000000000000000000
+    local  ZombieFEAnim_Button = Instance.new("TextButton")
+    ZombieFEAnim_Button.Name = " ZombieFEAnim_Button"
+    ZombieFEAnim_Button.Parent = titleContainer
+    ZombieFEAnim_Button.BackgroundColor3 = Color3.fromRGB(70, 70, 70) -- Более темный цвет фона
+    ZombieFEAnim_Button.Size = UDim2.new(0, 200, 0, 35) -- Размеры {0, 200}, {0, 35}
+    ZombieFEAnim_Button.Position = UDim2.new(0, 10, 0, 135) -- Позиция ниже Reset
+    ZombieFEAnim_Button.Text = "ZombieFEAnim"
+    ZombieFEAnim_Button.Font = Enum.Font.SourceSans
+    ZombieFEAnim_Button.TextSize = 14
+    ZombieFEAnim_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+    ZombieFEAnim_Button.ZIndex = 10000000000000000000
 
 
     local systemBrokenButton = Instance.new("TextButton")
@@ -145,6 +145,8 @@ local function openGUI()
     systemBrokenButton.TextSize = 14
     systemBrokenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
     systemBrokenButton.ZIndex = 10000000000000000000
+
+
 
     -- Добавление UICorner для кнопок
     local resetButtonCorner = Instance.new("UICorner")
@@ -220,9 +222,56 @@ local function openGUI()
         Game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end)
 
-    XD.MouseButton1Click:Connect(function()
-       
+    -- Реакция на нажатие кнопки "Reset"
+    resetButton.MouseButton1Click:Connect(function()
+        
     end)
+
+    local plr = game.Players.LocalPlayer
+
+    local function StopAnim()
+        -- Your code to stop animations goes here
+    end
+    
+    ZombieFEAnim_Button.MouseButton1Click:Connect(function()
+        local character = plr.Character
+        if character then
+            local animate = character:FindFirstChild("Animate")
+            local humanoid = character:FindFirstChild("Humanoid")
+            
+            if animate and humanoid then
+                animate.Disabled = true
+                StopAnim()
+                
+                -- Set new animations
+                animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=3489171152"
+                animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=3489171152"
+                animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=3489174223"
+                animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=3489173414"
+                animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+                animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+                animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+                
+                -- Enable jumping
+                humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+                humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+                
+                animate.Disabled = false
+            else
+                if not animate then
+                    warn("Animate object not found in player's character")
+                end
+                if not humanoid then
+                    warn("Humanoid object not found in player's character")
+                end
+            end
+        else
+            warn("Character not found for player")
+        end
+    end)
+    
+    
+   
 
     systemBrokenButton.MouseButton1Click:Connect(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
